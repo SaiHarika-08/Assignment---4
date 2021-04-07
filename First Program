@@ -1,4 +1,4 @@
-1.1# Write a Python Program(with class concepts) to find the area of the triangle using the below
+###1.1 Write a Python Program(with class concepts) to find the area of the triangle using the below
      formula.
      area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
      Function to take the length of the sides of triangle from user should be defined in the parent
@@ -24,3 +24,20 @@ class Triangle_Utilities(Triangle):
 
 instance = Triangle_Utilities(3,4,5)
 print ("Area of triangle = " + str(instance.get_area()) )
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+###1.2 Write a function filter_long_words() that takes a list of words and an integer n and returns the list of words that are longer than n.
+
+class list_Utilities:
+ def __init__(self, wordlist):
+  self.wordlist = wordlist
+  print ("Initialised list_Utilities object")
+
+ def filter_long_words(self, n):
+  return list(filter(lambda x:len(x) > n, self.wordlist))
+
+instance = list_Utilities(["This","is","a","beautiful","day"])
+print ("New List of Words  => " + str(instance.filter_long_words(3)) ) 
+ 
